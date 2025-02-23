@@ -1,1 +1,64 @@
+#pattern
+for i in range(1 ,5):
+    for j in range(1, i+1):
+        print(j, end=' ')
+    print()    
+
+# function
+def sayHello():
+    print("Good moening komal")
+sayHello()    
+sayHello()    
+sayHello()    
+sayHello() 
+
+#arithmatic functions
+def sub(a,b):
+    return a-b 
+    
+print(sub(2,3))  
+
+def mul(a,b,c):
+    return a*b*c
+    
+print(mul(2,3,9)) 
+
+#count vowels using function
+name=input("enter the name:")
+def task(name):
+    count=0;
+    for i in name:
+        if i=='a' or i=='e' or i=='i' or i=='o'  or i=='u':
+            count=count+1
+        
+    return count    
+        
+print("count is :",task('komal'))
+
+#odd or even
+def evenorodd(num):
+    if num%2==0:
+        return 'even'
+    else:
+        return 'odd'
+
+
+# factorial
+n=int(input("enter n:"))
+def factorial(n):
+    fact=1
+    for i in range (n,0,-1):
+        fact*=i 
+    return fact 
+print(factorial(n)) 
+
+
+# sum of number
+n=int(input("enter n:"))
+def sumn(n):
+    sum=0
+    for i in range(n,0,-1):
+        sum+=i
+    return sum 
+print(sumn(n))
 

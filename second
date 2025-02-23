@@ -1,0 +1,84 @@
+
+n=int(input("enter n:"))
+def sumofeven(n):
+    sum=0
+    s=str(n)
+    for i in range(0,6):
+        if i%2==0:
+            sum=sum+int(s[i])
+        
+    return sum 
+ print(sumofeven(n)) 
+# list---colection of mutable(changeable) objects
+'''list can be denoted by []
+   syntax : lisname=[obj1,obj2....objn]
+   exaple=['mango','apple','banana',1,5,7,2,@,%]'''
+   
+fruit=['apple','banana',1,2,'xyz']
+print(fruit)
+print(type(fruit))
+print(fruit[3])
+print(fruit[9])
+# operations on list
+fruit=['apple','banana',1,2,'xyz']
+fruit.append('hello')
+print(fruit)
+
+fruit=['apple','banana',1,2,'xyz']
+fruit.insert(2,'pineapple')
+print(fruit) insert the data at specific index
+
+# pop is a function which delete the last element
+
+fruit=['apple','banana',1,2,'xyz']
+fruit.pop(0)
+print(fruit)
+
+
+# remove--it delete specific value
+fruit=['apple','banana',1,2,'xyz']
+fruit.remove('xyz')
+print(fruit)
+
+''' clear - used to make the list empty
+
+    deletion method- del, clear, pop(0), pop,remove'''
+    
+    
+fruit=['a','b','c','d']
+fruit[1]='z'
+print(fruit)
+
+
+# list iteration
+num=[1 , 6,8,4,3]
+for n in num:   ''' if we take range means index'''
+    print(n)
+num=[1 , 6,8,4,3]
+for i in range(len(num)):
+    print(num[i])
+
+num=[1 , 6,8,4,3]
+for n in num: 
+if n%2 !=0:
+print(n)
+
+# sum of even numbers in list
+sum=0
+num=[1 , 6,8,4,3]
+for n in num: 
+    if n%2 =0:
+        sum+=n
+ print(sum)
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+# count the frequency of number
+nums=[1,7,2,3,2,1,8,4,3,8,8]
+count={}
+for i in nums:
+    if i in count:
+        count[i]+=1 
+    else:
+        count[i]=1 
+# print(count)     
+for k,v in count.items():
+    print(k,'->',v)
+
+
+#  count the frq of char in word
+name="komalkomalkomal"
+d={}    
+for i in name:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1 
+print(d)   
+
+
+#search contacts
+n=int(input("enter:"))
+contacts={}
+
+for i in range(n):
+    name,number=map(str,input().split(':'))
+    contacts[name]=number
+
+target=input('enter name of search:') 
+for name,number in contacts.items():
+    if target in contacts.keys():
+        print(contacts[target])
+        break
+    else:
+        print('not found')
+        break
+
+

@@ -1,0 +1,81 @@
+# try:
+#     arr=[10,20,30,4,5]
+#     print(arr[2])
+# except Exception:
+#     print('can not access out of range')
+# else:
+#     print('no Exception')  zero devision error , index out of range
+
+# array index out of range
+
+
+# files 
+''' file is a collection of data which is in the form of unorganised 
+'''
+# operations of files 
+''' read , write , delete, modify
+modes " r-> read ,
+w -> override(replace) only,
+a-> append(add at last) 
+w+ -> (both read and write) 
+x-> to create new file'''
+# f=open('sample.txt','r')
+# f=open('sample8.txt','w')
+# print(f.read())
+# print(f.append("hey"))
+
+# f=open('sample.txt','a')
+# print(f.write("hello"))
+# f.close()
+# f=open('sample.txt','r')
+# print(f.read())
+
+
+# excption handlig - the error which are occured durig runtime is known as exception to handling those exception it can be possible 
+# try:
+#     a=10
+#     b=0 
+#     print(a/b)
+# except Exception:
+#     print('not possible')
+# else:
+#     print('no exception')
+
+
+# try:
+#     arr=[10,20,30,4,5]
+#     print(arr[2])
+# except Exception:
+#     print('can not access out of range')
+# else:
+#     print('no Exception')  zero devision error , index out of range
+
+# array index out of range
+# try:
+#     a=100
+#     print(a)
+# except NameError:                      
+#     print('variable not declared')
+# else:
+#     print('no Exception')
+# finally:
+#     print('good by')
+
+
+# try:
+#     marks={
+#         101:505,
+#         102:75,
+#         103:65
+#     }
+#     print(marks[90])
+
+# except KeyError:
+#     print('invalid key')
+# else:
+#     print('no error')
+
+
+
+
+

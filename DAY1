@@ -1,0 +1,33 @@
+# liner search
+l=[1,2,3,4,5,6,7]
+se=int(input())
+for i in range(len(l)):
+    if l[i]==se:
+        print(i)
+        break
+else:
+    print(-1)
+
+------------------------------------------------------------------------------------
+
+2 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You must write an algorithm with O(log n) runtime complexity.
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        si=0
+        li=len(nums)-1
+        while si<=li:
+            mid=(si+li)//2
+            if nums[mid]==target:
+                return mid
+            elif target > nums[mid]:
+                si=mid+1
+            else:
+                li=mid-1      
+        return si        
+------------------------------------------------------------------------------------------------
+
+
+
+

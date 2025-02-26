@@ -1,0 +1,18 @@
+1Given a sorted array arr[] (with unique elements) and an integer k, find the index (0-based) of the largest element in arr[] that is less than or equal to k. This element is called the "floor" of k. If such an element does not exist, return -1.
+    
+    #Complete this function
+    def findFloor(self,arr,k):
+        #Your code here
+        fi=-1
+        si=0
+        li=len(arr)-1
+        while si<=li:
+            mid=(si+li)//2
+            if arr[mid]<=k:
+                fi=mid
+                si=mid+1
+            else:
+                li=mid-1
+        return fi  
+
+

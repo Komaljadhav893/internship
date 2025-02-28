@@ -34,3 +34,10 @@ while len(s)>1:
         s=s[i+1:]+s[:i]
 print(s)        
     
+
+
+
+
+
+
+

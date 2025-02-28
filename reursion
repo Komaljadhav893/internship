@@ -1,0 +1,14 @@
+# print name n  times using recursion
+def name(i,n):
+    if i>n:
+        return
+    print("komal")
+    name(i+1,n)
+print(name(4,5))    
+---------------------------------------------------------------------------------------------------------------
+def num(i,n):
+    if i<n:
+        return i
+    print(i)
+    num(i-1,n)
+print(num(9,3))

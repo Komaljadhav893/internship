@@ -1,0 +1,75 @@
+
+ll 83
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head==None or head.next==None:
+            return head
+        a=None
+        b=head
+        c=head.next
+        while b:
+            b.next=a
+            a=b
+            b=c    
+            if c:
+                c=c.next
+        head=a
+        return head        
+
+        ------------------------------------------------------------------------
+# Definition for singly-linked list.
+palindrome 234
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        s=""
+        curr=head
+        while curr :
+            s=s+str(curr.val)
+            curr=curr.next
+        if s==s[::-1]:
+            return True
+        return False    
+
+        --------------------------------------------
+        328. Odd Even Linked List
+Solved
+Medium
+Topics
+Companies
+Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+
+The first node is considered odd, and the second node is even, and so on.
+
+Note that the relative order inside both the even and odd groups should remain as it was in the input.
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head==None or head.next==None:
+            return head
+        odd=head
+        even=head.next
+        temp=even
+        while odd.next and odd.next.next:
+            odd.next=odd.next.next
+            even.next=even.next.next
+            odd=odd.next
+            even=even.next
+        odd.next=temp
+        return head        
+        
+        

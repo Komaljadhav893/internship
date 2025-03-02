@@ -1,0 +1,105 @@
+class node:
+    def __init__(self,data):
+        self.val=data
+        self.next=None 
+        self.prev=None
+class dll:
+    def __init__(self):
+        self.head=None
+        self.tail=None
+        
+        
+        # insert at begening
+    def insertatbed(self,data):
+        if self.head==None:
+            self.head=node(data)
+            self.tail=self.head
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head.prev=new
+            self.head=new
+    # insert at end 
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(data)
+            self.tail=self.head
+        else:
+            new=node(data)
+            self.tail.next=new
+            new.prev=self.tail
+            self.tail=new
+            
+    def maximum(self):
+        max=0
+        curr=self.head
+        while curr:
+            if curr.val>max:
+                max=curr.val
+            curr=curr.next
+        print(max) 
+        
+    def insertattop(self,data,pos):
+        new=node(data)
+        curr=self.head
+        for i in range(pos-2):
+            curr=curr.next
+        new.next=curr.next
+        curr.next.prev=new
+        curr.next=new
+        curr.prev=curr
+        
+        
+    def delatbeg(self):
+        self.head=self.head.next
+        self.head.prev=None
+        
+    def delatend(self):
+        self.tail=self.tail.prev
+        self.tail.next=None
+    def delofval(self,val):
+        curr=self.head
+        while curr:
+            if curr.next.val==val:
+                break
+            curr=curr.next
+        curr.next=curr.next.next
+        curr.next.prev=curr
+        
+        
+    def printing(self):
+        curr=self.head
+        while curr:
+            print(curr.val,end="->")
+            curr=curr.next
+            
+o=dll()
+for i in range(6):
+    o.insertatend(i)
+o.insertattop(9,3)
+o.printing()
+print()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

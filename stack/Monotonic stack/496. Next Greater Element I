@@ -1,0 +1,15 @@
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        res=[]
+        st=[]
+        d={}
+        for i in nums2:
+            while st and  st[-1]<i:
+                d[st.pop()]=i
+            st.append(i)
+        for i in nums1:
+            if i in d:
+                res.append(d[i])
+            else:
+                res.append(-1)
+        return res            

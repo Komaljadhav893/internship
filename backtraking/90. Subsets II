@@ -1,0 +1,22 @@
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        subset = []
+        nums.sort()
+
+        def create_subset(i):
+            if i == len(nums):
+                if subset[:] not in res:
+                    res.append(subset[:])
+                return
+
+            create_subset(i+1)
+            subset.append(nums[i])
+            
+            create_subset(i+1)
+            subset.pop()
+            
+
+        create_subset(0)
+        return res
+

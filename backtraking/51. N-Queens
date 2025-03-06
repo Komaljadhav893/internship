@@ -1,0 +1,32 @@
+class Solution:
+    def solveNQueens(self, n: int) -> List[List[str]]:
+        l=[['.']*n for i in range(n)]
+        res=[]
+        row=set()
+        col=set()
+        posdiag=set()
+        negdiag=set()
+        def fun(r):
+            if r==n:
+                ans=["".join(i) for i in l]
+                res.append(ans)
+                return
+            for c in range(n):
+                if r in row or c in col or (r+c)in posdiag or (r-c)  in negdiag:
+                    continue
+                l[r][c]='Q'
+                row.add(r)
+                col.add(c)
+                posdiag.add(r+c)
+                negdiag.add(r-c)
+                fun(r+1)
+                l[r][c]='.'
+                row.remove(r)
+                col.remove(c)
+                posdiag.remove(r+c)
+                negdiag.remove(r-c)
+        fun(0)        
+        return res
+
+
+        

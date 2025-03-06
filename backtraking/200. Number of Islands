@@ -1,0 +1,28 @@
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        x=len(grid)
+        y=len(grid[0])
+        count=0
+        def fun(i,j):
+            if grid[i][j]=='0':
+                return
+            grid[i][j]='0'
+                
+            if i<x-1:
+                fun(i+1,j)
+            if i>0:
+                fun(i-1,j)
+            if j<y-1:
+                fun(i,j+1)        
+            if j>0:
+                fun(i,j-1)       
+        count=0            
+            
+        for i in range(x):
+            for j in range(y):
+                if grid[i][j]=='1':
+                    count+=1
+                    fun(i,j)  
+        return count           
+                    
+        

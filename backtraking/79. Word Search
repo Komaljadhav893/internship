@@ -1,0 +1,30 @@
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        m=len(board)
+        n=len(board[0])
+
+        def fun(i,j,ind):
+            if i<0 or j<0 or i==m or j==n:
+                return False
+            if board[i][j]=="*" or board[i][j]!=word[ind]:
+                return False
+            if ind==len(word)-1:
+                return True    
+            a=board[i][j]
+            board[i][j] ="*"
+            x=fun(i+1,j,ind+1) or fun(i-1,j,ind+1) or fun(i,j+1,ind+1) or fun(i,j-1,ind+1)
+            board[i][j]=a
+            return x
+
+
+        for i in range(m):
+            for j in range(n):
+                if fun(i,j,0):
+                    return True
+        return False            
+
+
+
+
+        
+        

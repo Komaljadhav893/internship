@@ -1,0 +1,34 @@
+1) convert your array into max-heap
+   non-leaf=n//2 -1
+   loop-n//2-1 to 0
+
+   2)larget @0 ind
+iterate from last -> i-n-1 to 0
+  swap 0 ind i ind 
+heapfy from 0 to i-1
+
+  def heapify(i,n,l):
+    largest=i 
+    left=2*i+1 
+    right=2*i+2 
+    
+    if left<n and l[left]>l[i]:
+        largest=left 
+    if right<n and l[right]>l[largest]:
+        largest=right 
+        
+    if largest!=i:
+        l[largest],l[i]=l[i],l[largest]
+        heapify(largest,n,l)
+        
+l=[7,4,9,3,0,2]
+n=7 
+for i in range(n//2-1,-1,-1):
+    heapify(i,n,l)
+print(l)
+for i in range(n-1,0,-1):
+    l[0],l[i]=l[i],l[0]
+    heapify(0,i,l)
+print(l)    
+    
+        

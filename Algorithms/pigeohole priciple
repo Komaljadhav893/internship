@@ -1,0 +1,10 @@
+n element -> m space 
+n>m 
+atleast 1 space >1 element 
+2 3 1  2  4
+       | 
+
+
+
+       add 
+       (a+b)%m=[(a%m) +(b%m)]%m
